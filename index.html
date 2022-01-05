@@ -18,7 +18,7 @@
                 <div class="grid">
                     <nav class="header__navbar">
                         <ul class="header__navbar-list">
-                            <li class="header__navbar-item separation__header">Vào cửa hàng trên ứng dụng F8
+                            <li class="header__navbar-item separation__border">Vào cửa hàng trên ứng dụng F8
 
                                 <!-- /////////QR CODE////////// -->
                             <div class="header__qr">
@@ -119,8 +119,8 @@
                                     Trợ giúp
                                 </a>
                             </li>
-                            <li class="header__navbar-item bold-500 separation__header">Đăng kí</li>
-                            <li class="header__navbar-item bold-500">Đăng nhập</li>
+                            <li class="header__navbar-item bold-500 separation__border signUp" onclick="handleSignUpClick()">Đăng kí</li>
+                            <li class="header__navbar-item bold-500 signIn" onclick="handleSignInClick()">Đăng nhập</li>
                         </ul>
                     </nav>
                 </div>
@@ -146,45 +146,93 @@
                 <div class="modal__inner">
 
                     <!-- ///// AUTHEN FORM ////// -->
-                    <div class="modal__auth-form">
-                        <div class="modal__auth-header">
-                            <h3>Đăng kí</h3>
-                            <span class="modal__auth__switch-btn">Đăng nhập</span>
-                        </div>
-
-                        <div class="modal__auth-form__form">
-                            <div class="modal__auth-form__group">
-                                <input type="text" class="modal__auth-form__input" placeholder="Nhập email">
+                    <div class="modal__auth-form" onclick="event.stopImmediatePropagation()">
+                        <div class="modal__auth-container">
+                            <div class="modal__auth-header">
+                                <h3>Đăng kí</h3>
+                                <span class="modal__auth__switch-btn">Đăng nhập</span>
                             </div>
-                            <div class="modal__auth-form__group">
-                                <input type="password" class="modal__auth-form__input" placeholder="Nhập mật nhập">
+    
+                            <div class="modal__auth-form__form">
+                                <div class="modal__auth-form__group">
+                                    <input type="text" class="modal__auth-form__input" placeholder="Nhập email">
+                                </div>
+                                <div class="modal__auth-form__group">
+                                    <input type="password" class="modal__auth-form__input" placeholder="Nhập mật nhập">
+                                </div>
+                                <div class="modal__auth-form__group">
+                                    <input type="password" class="modal__auth-form__input" placeholder="Nhập lại mật nhập">
+                                </div>
                             </div>
-                            <div class="modal__auth-form__group">
-                                <input type="password" class="modal__auth-form__input" placeholder="Nhập lại mật nhập">
+    
+                            <div class="modal__auth-form__aside">
+                                <p class="modal__auth-form__policy-text">Bằng việc đăng kí, bạn đã đồng ý với Shop về
+                                    <a href="" class="modal__auth-form__policy-link">Điều khoản dịch vụ</a> & 
+                                    <a href="" class="modal__auth-form__policy-link">chính sách bảo mật.</a>
+                                </p>
                             </div>
-                        </div>
 
-                        <div class="modal__auth-form__aside">
-                            <p class="modal__auth-form__policy-text">Bằng việc đăng kí, bạn đã đồng ý với Shop về
-                                <a href="" class="modal__auth-form__policy-link">Điều khoản dịch vụ</a> & 
-                                <a href="" class="modal__auth-form__policy-link">chính sách bảo mật</a>
-                            </p>
-                        </div>
-
-                        <div class="modal__auth-form__control">
-                            <button class="btn">TRỞ LẠI</button>
-                            <button class="btn">ĐĂNG KÍ</button>
+                            <div class="separation"></div>
+    
+                            <div class="modal__auth-form__control">
+                                <button class="btn">TRỞ LẠI</button>
+                                <button class="btn btn--primary">ĐĂNG KÍ</button>
+                            </div>
                         </div>
 
                         <div class="modal__auth-form__socials">
-                            <a class="btn">
+                            <a class="btn" href="">
                                 <i class="fab fa-facebook-square"></i>
-                                Kết nối với Facebook</a>
-                            <a class="btn">
+                            <span class="">Kết nối với Facebook</span></a>
+                            <a class="btn" href="">
                                 <i class="fab fa-google"></i>
-                                Kết nối với Google</a>
+                                <span class="">Kết nối với Google</span></a>
                         </div>
                     </div>
+
+                    <!-- ///////////LognIn//////////// -->
+                    <div class="modal__auth-form" onclick="event.stopImmediatePropagation()">
+                        <div class="modal__auth-container">
+                            <div class="modal__auth-header">
+                                <h3>Đăng nhập</h3>
+                                <span class="modal__auth__switch-btn">Đăng ký</span>
+                            </div>
+    
+                            <div class="modal__auth-form__form">
+                                <div class="modal__auth-form__group">
+                                    <input type="text" class="modal__auth-form__input" placeholder="Nhập email">
+                                </div>
+                                <div class="modal__auth-form__group">
+                                    <input type="password" class="modal__auth-form__input" placeholder="Nhập mật nhập">
+                                </div>
+                              
+                            </div>
+    
+                            <div class="modal__auth-form__aside">
+                              <div class="modal__auth-form__help">
+                                <a href="" class="modal__auth-form__help-link separation__border">Quên mật khẩu</a>
+                                <a href="" class="modal__auth-form__help-link">Cần trợ giúp??</a>
+                              </div>
+                            </div>
+
+                            <div class="separation"></div>
+    
+                            <div class="modal__auth-form__control">
+                                <button class="btn">TRỞ LẠI</button>
+                                <button class="btn btn--primary">ĐĂNG NHẬP</button>
+                            </div>
+                        </div>
+
+                        <div class="modal__auth-form__socials">
+                            <a class="btn" href="">
+                                <i class="fab fa-facebook-square"></i>
+                            <span class="">Kết nối với Facebook</span></a>
+                            <a class="btn" href="">
+                                <i class="fab fa-google"></i>
+                                <span class="">Kết nối với Google</span></a>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
