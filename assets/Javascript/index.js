@@ -11,26 +11,33 @@ const signInBtn = $('.signIn')
 const signUpBtn = $('.signUp')
 const signUpForm = $('.modal__auth-form:first-child')
 const signInForm = $('.modal__auth-form:last-child')
+const switchSignUpBtn = $('.modal__auth__switch-btn.signUp')
+const switchSignInBtn = $('.modal__auth__switch-btn.signIn')
 
-const handleSignUpClick = () => {
+const handleModal = () => {
     const modal = $('.modal')
     modal.classList.add('active')
-    modal.onclick = (e) => {
-        e.stopPropagation()
-        modal.classList.remove('active')
+    modal.onclick = () => {
+    modal.classList.remove('active')
     }
+}
 
+const handleSignUpClick = () => {
     signUpForm.classList.add('signUp')
     signInForm.classList.remove('signIn')
+    handleModal()
 }
 
 const handleSignInClick = () => {
-    const modal = $('.modal')
-    modal.classList.add('active')
-    modal.onmousedown = () => {
-        modal.classList.remove('active')
-    }
-
     signInForm.classList.add('signIn')
     signUpForm.classList.remove('signUp')
+    handleModal()
+}
+
+const switchSignIn = () => {
+    handleSignInClick()
+}
+
+const switchSignUp = () => {
+    handleSignUpClick()
 }

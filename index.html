@@ -123,6 +123,12 @@
                             <li class="header__navbar-item bold-500 signIn" onclick="handleSignInClick()">Đăng nhập</li>
                         </ul>
                     </nav>
+
+                    <div class="header-width-search">
+                        <div class="header__logo">
+                            <img src="/assets/img/logo.png" alt="" class="">
+                        </div>
+                    </div>
                 </div>
             </header>
 
@@ -150,7 +156,7 @@
                         <div class="modal__auth-container">
                             <div class="modal__auth-header">
                                 <h3>Đăng kí</h3>
-                                <span class="modal__auth__switch-btn">Đăng nhập</span>
+                                <span class="modal__auth__switch-btn" onclick="switchSignIn()">Đăng nhập</span>
                             </div>
     
                             <div class="modal__auth-form__form">
@@ -191,11 +197,11 @@
                     </div>
 
                     <!-- ///////////LognIn//////////// -->
-                    <div class="modal__auth-form" onclick="event.stopImmediatePropagation()">
+                    <div class="modal__auth-form">
                         <div class="modal__auth-container">
                             <div class="modal__auth-header">
                                 <h3>Đăng nhập</h3>
-                                <span class="modal__auth__switch-btn">Đăng ký</span>
+                                <span class="modal__auth__switch-btn" onclick="switchSignUp()">Đăng ký</span>
                             </div>
     
                             <div class="modal__auth-form__form">

@@ -219,6 +219,7 @@
     right: 0;
     bottom: 0;
     display: none;
+    animation: modalFadeOut linear 0.1s;
 }
 
 .modal.active {
@@ -238,6 +239,7 @@
     border-radius: 4px;
     overflow: hidden;
     z-index: 1;
+    animation: authorFormFadeOut ease-in 0.2s;
 }
 
 .modal__inner {
