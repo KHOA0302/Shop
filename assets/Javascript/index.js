@@ -9,8 +9,8 @@ notifyItems.forEach((notifyItem, index) => notifyItem.onclick = function() {
 
 const signInBtn = $('.signIn')
 const signUpBtn = $('.signUp')
-const signUpForm = $('.modal__auth-form:first-child')
-const signInForm = $('.modal__auth-form:last-child')
+const signUpForm = $('.modal__auth-form-signup')
+const signInForm = $('.modal__auth-form-signin')
 const switchSignUpBtn = $('.modal__auth__switch-btn.signUp')
 const switchSignInBtn = $('.modal__auth__switch-btn.signIn')
 

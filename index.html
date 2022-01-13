@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Shop</title>
+        <link rel="icon" href="./assets/img/logo-page.png" type="image/png" sizes="64x64"class="">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./assets/css/base.css">
@@ -126,7 +127,41 @@
 
                     <div class="header-width-search">
                         <div class="header__logo">
-                            <img src="/assets/img/logo.png" alt="" class="">
+                            <img src="/assets/img/logo.png" alt=""  class="header__logo-img">
+                        </div>
+
+                        <div class="header-search">
+                            <div class="header-search-wrap">
+                                <input type="text" class="header-search-input" placeholder="Search..." autocomplete >
+                                <div class="header__search-history">
+                                    <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                    <ul class="header__search-history-list">
+                                        <li class="header__search-history-item">
+                                            <a href="" class="header__search-history-item-link">Những đòn tâm lý trong thuyết phục</a>
+                                        </li>
+                                        <li class="header__search-history-item">
+                                            <a href="" class="header__search-history-item-link">Góc nhìn Alan Phan dánh tặng doanh nhân Việt trong thế trận toàn cầu</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <select name="" id="" class="header-search-select">
+                                <option value="" class="header-search-option">Trong Shop</option>
+                                <option value="" class="header-search-option">Ngoai Shop</option>
+                            </select>
+                            <button class="header-search-icon">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+
+                        <div class="header__cart">
+                            <i class="fas fa-shopping-basket header__cart-icon"></i>
+                            <div class="header__cart-list">
+
+                            </div>
+                            <div class="header__cart-list-empty">
+                                <img src="./assets/img/empty-cart.png" alt="" class="header__cart-list-empty-img">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -152,7 +187,7 @@
                 <div class="modal__inner">
 
                     <!-- ///// AUTHEN FORM ////// -->
-                    <div class="modal__auth-form" onclick="event.stopImmediatePropagation()">
+                    <div class="modal__auth-form-signup" onclick="event.stopImmediatePropagation()">
                         <div class="modal__auth-container">
                             <div class="modal__auth-header">
                                 <h3>Đăng kí</h3>
@@ -197,7 +232,7 @@
                     </div>
 
                     <!-- ///////////LognIn//////////// -->
-                    <div class="modal__auth-form">
+                    <div class="modal__auth-form-signin" onclick="event.stopImmediatePropagation()">
                         <div class="modal__auth-container">
                             <div class="modal__auth-header">
                                 <h3>Đăng nhập</h3>
